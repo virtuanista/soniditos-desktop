@@ -37,7 +37,7 @@ function createWindow() {
     backgroundColor: '#fff'
   });
 
-  win.loadURL('https://soniditos.com');
+  win.loadURL('https://open.soniditos.com');
 
   client = new rpc.Client({ transport: 'ipc' });
   const configPath = path.resolve(__dirname, '..', 'src', 'config.json');
@@ -89,7 +89,7 @@ function createWindow() {
               buttons: [
                 {
                   label: config.Button1,
-                  url: `https://soniditos.com/track/${encodeURIComponent(cuedMediaId)}/${encodeURIComponent(mediaArtist)}`
+                  url: `https://open.soniditos.com/track/${encodeURIComponent(cuedMediaId)}/${encodeURIComponent(mediaArtist)}`
                 },
               ],
               type: 2
@@ -152,7 +152,7 @@ function createTray() {
     }
   ]);
 
-  tray.setToolTip('soniditos.com');
+  tray.setToolTip('open.soniditos.com');
   tray.setContextMenu(contextMenu);
 
   tray.on('double-click', () => {
